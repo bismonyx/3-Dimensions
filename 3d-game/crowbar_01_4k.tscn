@@ -1,0 +1,7 @@
+[gd_scene load_steps=3 format=3 uid="uid://c1a5o5ugmakp7"]
+
+[ext_resource type="PackedScene" uid="uid://b5t6hmqq1qo74" path="res://crowbar_01_4k.glb" id="1_hqet7"]
+[ext_resource type="Script" uid="uid://cyjiu6f7nn2vs" path="res://crowbar_01_4k.gd" id="2_md8xj"]
+
+[node name="crowbar_01_4k" instance=ExtResource("1_hqet7")]
+script = ExtResource("2_md8xj")
