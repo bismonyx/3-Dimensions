@@ -324,13 +324,16 @@ transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 3.7303
 fov = 100.0
 
 [node name="Reach" type="RayCast3D" parent="CharacterBody3D/Pivot/SpringArm3D/Camera3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.727243, 0)
 target_position = Vector3(0, 0, -5)
 
 [node name="hand" type="Node3D" parent="CharacterBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.13957, 0, 0)
 
-[node name="crowbar_01_4k" parent="CharacterBody3D/hand" instance=ExtResource("2_cbnxv")]
+[node name="crowbar" parent="CharacterBody3D/hand" instance=ExtResource("2_cbnxv")]
 transform = Transform3D(-0.505929, 1.00927, 9.93607, 0, 9.94881, -1.01056, -9.98719, -0.0511273, -0.503339, -1.05444, -0.416574, 0.612231)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CharacterBody3D/hand/crowbar"]
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.46793, 0.883766, 0, -0.883766, 0.46793, 0, 551.351, 0)
