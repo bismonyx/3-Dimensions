@@ -1,5 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://dkhv62ty5fesc"]
+[gd_scene load_steps=6 format=3 uid="uid://dkhv62ty5fesc"]
 
+[ext_resource type="Script" uid="uid://c40twqfdaato6" path="res://intro_area.gd" id="1_q2vtk"]
 [ext_resource type="Script" uid="uid://16w385wcqwlm" path="res://stand-in-character.gd" id="1_rbmbq"]
 [ext_resource type="PackedScene" uid="uid://dk0y6seqyoax6" path="res://weapon_hr.tscn" id="2_q2vtk"]
 
@@ -10,6 +11,22 @@ height = 1.5
 height = 1.5
 
 [node name="Intro Area" type="Node3D"]
+_import_path = NodePath("")
+unique_name_in_owner = false
+process_mode = 0
+process_priority = 0
+process_physics_priority = 0
+process_thread_group = 0
+physics_interpolation_mode = 0
+auto_translate_mode = 0
+editor_description = ""
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+rotation_edit_mode = 0
+rotation_order = 2
+top_level = false
+visible = true
+visibility_parent = NodePath("")
+script = ExtResource("1_q2vtk")
 
 [node name="Floor" type="CSGBox3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 125.491, 0, 0)
@@ -23,7 +40,22 @@ size = Vector3(220, 5, 60)
 metadata/_edit_lock_ = true
 
 [node name="Buildings" type="Node3D" parent="."]
+_import_path = NodePath("")
+unique_name_in_owner = false
+process_mode = 0
+process_priority = 0
+process_physics_priority = 0
+process_thread_group = 0
+physics_interpolation_mode = 0
+auto_translate_mode = 0
+editor_description = ""
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -72.5161, 71.9592, 0)
+rotation_edit_mode = 0
+rotation_order = 2
+top_level = false
+visible = true
+visibility_parent = NodePath("")
+script = null
 metadata/_edit_lock_ = true
 
 [node name="CSGBox3D2" type="CSGBox3D" parent="Buildings"]
@@ -321,6 +353,22 @@ transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -0.104
 mesh = SubResource("CapsuleMesh_cbnxv")
 
 [node name="Head" type="Node3D" parent="CharacterBody3D"]
+_import_path = NodePath("")
+unique_name_in_owner = false
+process_mode = 0
+process_priority = 0
+process_physics_priority = 0
+process_thread_group = 0
+physics_interpolation_mode = 0
+auto_translate_mode = 0
+editor_description = ""
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+rotation_edit_mode = 0
+rotation_order = 2
+top_level = false
+visible = true
+visibility_parent = NodePath("")
+script = null
 
 [node name="Camera3D" type="Camera3D" parent="CharacterBody3D/Head"]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.252934, 0.351721, -0.103703)
@@ -331,7 +379,22 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.727243, 0)
 target_position = Vector3(0, 0, -5)
 
 [node name="hand" type="Node3D" parent="CharacterBody3D"]
+_import_path = NodePath("")
+unique_name_in_owner = false
+process_mode = 0
+process_priority = 0
+process_physics_priority = 0
+process_thread_group = 0
+physics_interpolation_mode = 0
+auto_translate_mode = 0
+editor_description = ""
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.65117, 0, 0.628959)
+rotation_edit_mode = 0
+rotation_order = 2
+top_level = false
+visible = true
+visibility_parent = NodePath("")
+script = null
 
 [node name="weapon HR" parent="CharacterBody3D/hand" instance=ExtResource("2_q2vtk")]
 transform = Transform3D(-0.00540788, 0, 0.998537, 0, 0.2, 0, -0.0998537, 0, -0.0540788, -2.44831, 0, -0.0490427)
