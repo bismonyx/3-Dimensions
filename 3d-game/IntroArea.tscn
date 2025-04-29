@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://dkhv62ty5fesc"]
+[gd_scene load_steps=7 format=3 uid="uid://dkhv62ty5fesc"]
 
 [ext_resource type="Script" uid="uid://c40twqfdaato6" path="res://intro_area.gd" id="1_q2vtk"]
 [ext_resource type="Script" uid="uid://16w385wcqwlm" path="res://stand-in-character.gd" id="1_rbmbq"]
 [ext_resource type="PackedScene" uid="uid://dk0y6seqyoax6" path="res://weapon_hr.tscn" id="2_q2vtk"]
+[ext_resource type="PackedScene" uid="uid://cevokki0lxuqu" path="res://black rat test.tscn" id="4_y3byi"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_5ala7"]
 height = 1.5
@@ -346,3 +347,6 @@ light_indirect_energy = 2.293
 light_volumetric_fog_energy = 6.98
 light_angular_distance = 16.37
 shadow_enabled = true
+
+[node name="Node3D" parent="." instance=ExtResource("4_y3byi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.5916, 0.664947, -0.562393)

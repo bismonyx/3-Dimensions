@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://cevokki0lxuqu"]
+
+[ext_resource type="PackedScene" uid="uid://lefcla5fg24p" path="res://addons/black-rat-free-download/source/blackrat/blackrat.fbx" id="1_nesrv"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="blackrat" parent="." instance=ExtResource("1_nesrv")]
+transform = Transform3D(100, 0, 0, 0, 100, 0, 0, 0, 100, -0.784006, 0, -3.56088)
