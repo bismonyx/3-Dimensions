@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://1fafs4dcjcut"]
+
+[ext_resource type="Script" uid="uid://dmp8n8c1afqbx" path="res://weapon.gd" id="1_swcir"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_o2wld"]
+size = Vector3(0.266602, 0.243401, 1.08502)
+
+[sub_resource type="BoxMesh" id="BoxMesh_8xwfw"]
+
+[node name="weapon" type="RigidBody3D"]
+script = ExtResource("1_swcir")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0130699, -0.019048, 0.02091)
+shape = SubResource("BoxShape3D_o2wld")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.1, 0, 0, 0, 0.2, 0, 0, 0, 1, -0.00286484, 0.0125371, -0.00182605)
+mesh = SubResource("BoxMesh_8xwfw")

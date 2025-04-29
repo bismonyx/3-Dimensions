@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://dk0y6seqyoax6"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_06rux"]
+albedo_color = Color(0.871993, 0.175444, 0.216415, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_06rux"]
+material = SubResource("StandardMaterial3D_06rux")
+
+[node name="weapon HR" type="MeshInstance3D"]
+transform = Transform3D(0.1, 0, 0, 0, 0.2, 0, 0, 0, 1, 0, 0, 0)
+mesh = SubResource("BoxMesh_06rux")
