@@ -1,15 +1,86 @@
-[gd_scene load_steps=7 format=3 uid="uid://dkhv62ty5fesc"]
+[gd_scene load_steps=13 format=3 uid="uid://dkhv62ty5fesc"]
 
 [ext_resource type="Script" uid="uid://c40twqfdaato6" path="res://intro_area.gd" id="1_q2vtk"]
 [ext_resource type="Script" uid="uid://16w385wcqwlm" path="res://stand-in-character.gd" id="1_rbmbq"]
-[ext_resource type="PackedScene" uid="uid://dk0y6seqyoax6" path="res://weapon_hr.tscn" id="2_q2vtk"]
-[ext_resource type="PackedScene" uid="uid://cevokki0lxuqu" path="res://black rat test.tscn" id="4_y3byi"]
+[ext_resource type="Script" uid="uid://y5rq2uvo5atk" path="res://weapon_hr.gd" id="3_e7i3o"]
+[ext_resource type="PackedScene" uid="uid://coehieki287wl" path="res://animal_1.tscn" id="4_dlwjt"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_5ala7"]
-height = 1.5
+radius = 1.27565
+height = 4.75074
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_cbnxv"]
 height = 1.5
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_06rux"]
+albedo_color = Color(0.871993, 0.175444, 0.216415, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_06rux"]
+material = SubResource("StandardMaterial3D_06rux")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_ch8it"]
+data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5)
+
+[sub_resource type="Animation" id="Animation_y3byi"]
+resource_name = "attack"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("hand/weapon HR:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.466667, 0.966667),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(-1.78559, 1.94743, -0.668545), Vector3(-2.186, 1.947, -0.669), Vector3(-1.78559, 1.94743, -0.668545)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("hand/weapon HR:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5, 0.966667),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(1.41372, -1.67377, -3.14159), Vector3(2.98451, -1.67377, -3.14159), Vector3(1.41372, -1.67377, -3.14159)]
+}
+
+[sub_resource type="Animation" id="Animation_uirkv"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("hand/weapon HR:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-1.93868, 1.09022, -0.488676)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("hand/weapon HR:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-3.72613e-08, 1.6249, 5.82076e-10)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_e7i3o"]
+_data = {
+&"RESET": SubResource("Animation_uirkv"),
+&"attack": SubResource("Animation_y3byi")
+}
 
 [node name="Intro Area" type="Node3D"]
 script = ExtResource("1_q2vtk")
@@ -316,7 +387,7 @@ radius = 1.0
 height = 3.0
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.106507, 0.10465)
 shape = SubResource("CapsuleShape3D_5ala7")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="CharacterBody3D"]
@@ -326,7 +397,7 @@ mesh = SubResource("CapsuleMesh_cbnxv")
 [node name="Head" type="Node3D" parent="CharacterBody3D"]
 
 [node name="Camera3D" type="Camera3D" parent="CharacterBody3D/Head"]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.252934, 0.351721, -0.103703)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.252934, 0.685438, -0.557917)
 fov = 100.0
 
 [node name="Reach" type="RayCast3D" parent="CharacterBody3D/Head/Camera3D"]
@@ -334,11 +405,24 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.727243, 0)
 target_position = Vector3(0, 0, -5)
 
 [node name="hand" type="Node3D" parent="CharacterBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.65117, 0, 0.628959)
+transform = Transform3D(0.0317578, -0.00280862, -0.999492, 0.0880946, 0.996112, -4.69226e-09, 0.995606, -0.0880498, 0.0318816, -0.0492406, -1.1907, 0.902457)
 
-[node name="weapon HR" parent="CharacterBody3D/hand" instance=ExtResource("2_q2vtk")]
-transform = Transform3D(-0.00540788, 0, 0.998537, 0, 0.2, 0, -0.0998537, 0, -0.0540788, -2.44831, 0, -0.0490427)
+[node name="weapon HR" type="MeshInstance3D" parent="CharacterBody3D/hand"]
+transform = Transform3D(-0.00540789, -7.43507e-09, 0.998537, 5.82077e-11, 0.2, 3.72614e-08, -0.0998537, 5.19255e-10, -0.0540788, -1.93868, 1.09022, -0.488676)
+mesh = SubResource("BoxMesh_06rux")
 skeleton = NodePath("../../Head")
+script = ExtResource("3_e7i3o")
+
+[node name="Area3D" type="Area3D" parent="CharacterBody3D/hand/weapon HR"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D/hand/weapon HR/Area3D"]
+transform = Transform3D(1, -1.49012e-08, 1.11759e-08, 0, 1, -2.98023e-08, -2.91038e-11, 9.31323e-10, 1, 0, 0, 0)
+shape = SubResource("ConcavePolygonShape3D_ch8it")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CharacterBody3D"]
+libraries = {
+&"": SubResource("AnimationLibrary_e7i3o")
+}
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.46793, 0.883766, 0, -0.883766, 0.46793, 0, 551.351, 0)
@@ -348,5 +432,7 @@ light_volumetric_fog_energy = 6.98
 light_angular_distance = 16.37
 shadow_enabled = true
 
-[node name="Node3D" parent="." instance=ExtResource("4_y3byi")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.5916, 0.664947, -0.562393)
+[node name="Animal 2" parent="." instance=ExtResource("4_dlwjt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.315, 2.32498, -6.82815)
+
+[connection signal="body_entered" from="CharacterBody3D/hand/weapon HR/Area3D" to="CharacterBody3D/hand/weapon HR" method="_on_area_3d_body_entered"]

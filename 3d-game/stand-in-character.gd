@@ -31,7 +31,7 @@ func _input(event):
 	if event is InputEventMouseMotion:
 		rotate_y(deg_to_rad(-event.relative.x * mouse_sensitivity))
 		head.rotate_x(deg_to_rad(-event.relative.y * mouse_sensitivity))
-		head.rotation.x = clamp(head.rotation.x, deg_to_rad(-90), deg_to_rad(90))
+		rotation.x = clamp(head.rotation.x, deg_to_rad(-90), deg_to_rad(90))
 
 # --- Process: Handles movement + weapon interaction ---
 func _process(delta):
@@ -52,6 +52,9 @@ func handle_weapon_interaction():
 	else:
 		weapon_to_drop = null
 		
+	if Input.is_action_just_pressed("attack"):
+		$AnimationPlayer.play("attack")
+	
 	if Input.is_action_just_pressed("interact"):
 		if weapon_to_spawn != null:
 			if hand.get_child_count() > 0:
