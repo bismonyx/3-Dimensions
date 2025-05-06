@@ -1,9 +1,14 @@
-[gd_scene load_steps=13 format=3 uid="uid://dkhv62ty5fesc"]
+[gd_scene load_steps=18 format=3 uid="uid://dkhv62ty5fesc"]
 
 [ext_resource type="Script" uid="uid://c40twqfdaato6" path="res://intro_area.gd" id="1_q2vtk"]
 [ext_resource type="Script" uid="uid://16w385wcqwlm" path="res://stand-in-character.gd" id="1_rbmbq"]
 [ext_resource type="Script" uid="uid://y5rq2uvo5atk" path="res://weapon_hr.gd" id="3_e7i3o"]
 [ext_resource type="PackedScene" uid="uid://coehieki287wl" path="res://animal_1.tscn" id="4_dlwjt"]
+[ext_resource type="PackedScene" uid="uid://c2oy8wx7vvwo6" path="res://3D models/spaceship_o-100_mk2/scene.gltf" id="5_e7i3o"]
+[ext_resource type="PackedScene" uid="uid://dlugm0p6cu2g0" path="res://3D models/white_tiger_rigged_animated/scene.gltf" id="6_dlwjt"]
+[ext_resource type="Script" uid="uid://b687hogvolxqb" path="res://3D models/white_tiger_rigged_animated/animals.gd" id="7_ch8it"]
+[ext_resource type="PackedScene" uid="uid://dgbe306osfcn2" path="res://3D models/Buffalo_A2.glb" id="8_hqpmw"]
+[ext_resource type="PackedScene" uid="uid://cjlpiu6d8sca7" path="res://3D models/temperature_scanner/scene.gltf" id="9_uac7w"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_5ala7"]
 radius = 1.27565
@@ -20,6 +25,33 @@ material = SubResource("StandardMaterial3D_06rux")
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_ch8it"]
 data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5)
+
+[sub_resource type="Animation" id="Animation_uirkv"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("hand/weapon HR:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-1.93868, 1.09022, -0.488676)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("hand/weapon HR:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-3.72613e-08, 1.6249, 5.82076e-10)]
+}
 
 [sub_resource type="Animation" id="Animation_y3byi"]
 resource_name = "attack"
@@ -47,33 +79,6 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [Vector3(1.41372, -1.67377, -3.14159), Vector3(2.98451, -1.67377, -3.14159), Vector3(1.41372, -1.67377, -3.14159)]
-}
-
-[sub_resource type="Animation" id="Animation_uirkv"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("hand/weapon HR:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(-1.93868, 1.09022, -0.488676)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("hand/weapon HR:rotation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(-3.72613e-08, 1.6249, 5.82076e-10)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_e7i3o"]
@@ -408,7 +413,7 @@ target_position = Vector3(0, 0, -5)
 transform = Transform3D(0.0317578, -0.00280862, -0.999492, 0.0880946, 0.996112, -4.69226e-09, 0.995606, -0.0880498, 0.0318816, -0.0492406, -1.1907, 0.902457)
 
 [node name="weapon HR" type="MeshInstance3D" parent="CharacterBody3D/hand"]
-transform = Transform3D(-0.00540789, -7.43507e-09, 0.998537, 5.82077e-11, 0.2, 3.72614e-08, -0.0998537, 5.19255e-10, -0.0540788, -1.93868, 1.09022, -0.488676)
+transform = Transform3D(-0.00540773, -7.43506e-09, 0.998537, 5.82076e-11, 0.2, 3.72613e-08, -0.0998537, 5.19243e-10, -0.0540773, -1.93868, 1.09022, -0.488676)
 mesh = SubResource("BoxMesh_06rux")
 skeleton = NodePath("../../Head")
 script = ExtResource("3_e7i3o")
@@ -434,5 +439,18 @@ shadow_enabled = true
 
 [node name="Animal 2" parent="." instance=ExtResource("4_dlwjt")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.315, 2.32498, -6.82815)
+
+[node name="Spaceship" parent="." instance=ExtResource("5_e7i3o")]
+transform = Transform3D(0.100442, 0, 0, 0, 0.100442, 0, 0, 0, 0.100442, 107.76, 8.95315, -9.72166)
+
+[node name="Tiger" parent="." instance=ExtResource("6_dlwjt")]
+transform = Transform3D(0.0398603, 0, 0, 0, 0.0398603, 0, 0, 0, 0.0398603, -3.68757, 2.54793, -21.9758)
+script = ExtResource("7_ch8it")
+
+[node name="Buffalo" parent="." instance=ExtResource("8_hqpmw")]
+transform = Transform3D(-1.54972, 0, -0.893649, 0, 1.78892, 0, 0.893649, 0, -1.54972, 2.52445, 3.24661, 6.115)
+
+[node name="Scanner" parent="." instance=ExtResource("9_uac7w")]
+transform = Transform3D(0.0441827, 0, 0, 0, 0.0441827, 0, 0, 0, 0.0441827, -5.55379, 5.43833, -5.35503)
 
 [connection signal="body_entered" from="CharacterBody3D/hand/weapon HR/Area3D" to="CharacterBody3D/hand/weapon HR" method="_on_area_3d_body_entered"]
