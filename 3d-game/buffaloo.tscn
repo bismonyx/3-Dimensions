@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://ccyuul06ecoe"]
+
+[ext_resource type="Script" uid="uid://c56oygy0q6t7v" path="res://buffaloo.gd" id="1_rerq6"]
+[ext_resource type="PackedScene" uid="uid://dgbe306osfcn2" path="res://3D models/Buffalo_A2.glb" id="2_lfqyu"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_rkg3g"]
+radius = 1.06366
+height = 3.55541
+
+[node name="buffaloo" type="AnimatableBody3D" groups=["enemy"]]
+script = ExtResource("1_rerq6")
+
+[node name="Buffalo_A2" parent="." instance=ExtResource("2_lfqyu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.137307, 0, -0.340217)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.998025, 0.00163737, -0.0627905, 0.0628118, -0.0277837, 0.997639, -0.000111043, -0.999613, -0.0278317, -0.249018, 0.931779, 0.0495867)
+shape = SubResource("CapsuleShape3D_rkg3g")

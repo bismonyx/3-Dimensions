@@ -1,13 +1,12 @@
-[gd_scene load_steps=18 format=3 uid="uid://dkhv62ty5fesc"]
+[gd_scene load_steps=17 format=3 uid="uid://dkhv62ty5fesc"]
 
 [ext_resource type="Script" uid="uid://c40twqfdaato6" path="res://intro_area.gd" id="1_q2vtk"]
 [ext_resource type="Script" uid="uid://16w385wcqwlm" path="res://stand-in-character.gd" id="1_rbmbq"]
 [ext_resource type="Script" uid="uid://y5rq2uvo5atk" path="res://weapon_hr.gd" id="3_e7i3o"]
 [ext_resource type="PackedScene" uid="uid://coehieki287wl" path="res://animal_1.tscn" id="4_dlwjt"]
 [ext_resource type="PackedScene" uid="uid://c2oy8wx7vvwo6" path="res://3D models/spaceship_o-100_mk2/scene.gltf" id="5_e7i3o"]
-[ext_resource type="PackedScene" uid="uid://dlugm0p6cu2g0" path="res://3D models/white_tiger_rigged_animated/scene.gltf" id="6_dlwjt"]
-[ext_resource type="Script" uid="uid://b687hogvolxqb" path="res://3D models/white_tiger_rigged_animated/animals.gd" id="7_ch8it"]
-[ext_resource type="PackedScene" uid="uid://dgbe306osfcn2" path="res://3D models/Buffalo_A2.glb" id="8_hqpmw"]
+[ext_resource type="PackedScene" uid="uid://iekrkyjf4j7r" path="res://tigerr.tscn" id="8_cuo0o"]
+[ext_resource type="PackedScene" uid="uid://ccyuul06ecoe" path="res://buffaloo.tscn" id="9_ch8it"]
 [ext_resource type="PackedScene" uid="uid://cjlpiu6d8sca7" path="res://3D models/temperature_scanner/scene.gltf" id="9_uac7w"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_5ala7"]
@@ -443,14 +442,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.315, 2.32498, -6.82815)
 [node name="Spaceship" parent="." instance=ExtResource("5_e7i3o")]
 transform = Transform3D(0.100442, 0, 0, 0, 0.100442, 0, 0, 0, 0.100442, 107.76, 8.95315, -9.72166)
 
-[node name="Tiger" parent="." instance=ExtResource("6_dlwjt")]
-transform = Transform3D(0.0398603, 0, 0, 0, 0.0398603, 0, 0, 0, 0.0398603, -3.68757, 2.54793, -21.9758)
-script = ExtResource("7_ch8it")
-
-[node name="Buffalo" parent="." instance=ExtResource("8_hqpmw")]
-transform = Transform3D(-1.54972, 0, -0.893649, 0, 1.78892, 0, 0.893649, 0, -1.54972, 2.52445, 3.24661, 6.115)
-
 [node name="Scanner" parent="." instance=ExtResource("9_uac7w")]
 transform = Transform3D(0.0441827, 0, 0, 0, 0.0441827, 0, 0, 0, 0.0441827, -5.55379, 5.43833, -5.35503)
+
+[node name="buffaloo" parent="." instance=ExtResource("9_ch8it")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 5.1468, 2.92993, 6.53604)
+
+[node name="Tigerr" parent="." instance=ExtResource("8_cuo0o")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -3.3801, 2.58444, -26.4696)
 
 [connection signal="body_entered" from="CharacterBody3D/hand/weapon HR/Area3D" to="CharacterBody3D/hand/weapon HR" method="_on_area_3d_body_entered"]

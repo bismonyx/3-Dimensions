@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://iekrkyjf4j7r"]
+
+[ext_resource type="Script" uid="uid://60oarcg8p7w7" path="res://tigerr.gd" id="1_auj3r"]
+[ext_resource type="PackedScene" uid="uid://dlugm0p6cu2g0" path="res://3D models/white_tiger_rigged_animated/scene.gltf" id="2_n7v8x"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_8t6xk"]
+radius = 8.77488
+height = 26.7506
+
+[node name="Tigerr" type="AnimatableBody3D" groups=["enemy"]]
+script = ExtResource("1_auj3r")
+
+[node name="Tiger" parent="." instance=ExtResource("2_n7v8x")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -0.432369, 0, 1.8524)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(4, 0, 0, 0, -1.74846e-07, -4, 0, 4, -1.74846e-07, -0.41184, 31.73, 5.22863)
+shape = SubResource("CapsuleShape3D_8t6xk")
