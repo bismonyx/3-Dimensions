@@ -1,14 +1,14 @@
 CorporateCharacterDialogic: Automated Emergency Systems have pinged Central Command. We’re getting readings that you crashed. Is this true?
 - Yes! Come pick me up, I crash landed on the intended planet.
-	CorporateCharacterDialogic: Crash landing confirmed. Retrieval impossible - Agent behind active work quotas. Should’ve put in more hours. 
+	CorporateCharacterDialogic: Crash landing confirmed. Retrieval impossible - Agent behind active work quotas. Should’ve put in more hours.
 	CorporateCharacterDialogic: Corporate suggests beginning research on the foreign planet. Once the standard research quota is met, assistance will be provided. Any further questions?
 	label Tutorial beginning
 	- How do I meet the research quota for this planet?
-		CorporateCharacterDialogic: The research quota set out by Corporate is met by successfully scanning both alive and decaying life forms on the planet. The current quota is set to… 5 life forms. 
-		CorporateCharacterDialogic: Your Xplore Tablet has the adequate scanning capabilities to fulfill these requirements. Any other questions?
+		CorporateCharacterDialogic: The research quota set out by Corporate is met by successfully scanning both alive and decaying life forms on the planet. The current quota is set to… 5 life forms.
+		CorporateCharacterDialogic: Your Xplore Tool has the adequate scanning capabilities to fulfill these requirements. Any other questions?
 		jump Tutorial beginning
-	- How do I use the Xplore Tablet?
-		CorporateCharacterDialogic: No wonder you’re behind active work quotas - you skip training or something? You can grab your tablet by pressing “E” on your “mental keyboard”. You can share optics with the tablet. 
+	- How do I use the Xplore Tool?
+		CorporateCharacterDialogic: No wonder you’re behind active work quotas - you skip training or something? You can grab your tool by pressing “E” on your “mental keyboard”. You can share optics with the tablet.
 		[wait_input]
 		CorporateCharacterDialogic: Looks like focusing controls are inoperable. You’ll have to get close to the life form you are scanning for it to work. You can complete your scan by pressing “F” on your “mental keyboard”. Any other questions?
 		jump Tutorial beginning
@@ -20,25 +20,12 @@ CorporateCharacterDialogic: Automated Emergency Systems have pinged Central Comm
 		[wait time="1.0"]
 		CorporateCharacterDialogic: ......
 		[wait time="1.0"]
-		If it breathes or used to breathe.....
-		[wait time="1.0"]
 		CorporateCharacterDialogic: Moron.
 		CorporateCharacterDialogic: Any other questions?
 		jump Tutorial beginning
-	- Can I have something to protect myself?
-		if {} == "":
-			CorporateCharacterDialogic: Well… company policy is that aggressions onto foreign life forms is illegal under Article 1.14.8, but… scans suggest there is a weapon adequate for defending yourself on a nearby bench. Any other questions?
-		elif :
-			CorporateCharacterDialogic: Well… company policy is that aggressions onto foreign life forms is illegal under Article 1.14.8, but… scans suggest there is a weapon adequate for defending yourself on a nearby bench. Any other questions?
-		else:
-			CorporateCharacterDialogic: No. You know the Company’s policy. Any other questions?
-		return
-	- Where will I get picked up?
-		CorporateCharacterDialogic: If you fulfill the quota, you can expect to be picked up at the marker I’ve left on your directional view. Any other questions?
-		jump Tutorial beginning
 	- Nope, I’m good.
-		CorporateCharacterDialogic: Good luck. One last thing - we’ve noticed your suit’s electrical system is malfunctioning. Try not to step in any water - you’re not grounded anymore. Probably won’t end well. Thank you for continuing your employment with Xplore Galactic Systems! Any other questions?
-		jump Tutorial beginning
+		CorporateCharacterDialogic: Good luck. Thank you for continuing your employment with Xplore Galactic Systems!
+		[end_timeline]
 - No, I’m fine.
 	CorporateCharacterDialogic: Confirmed. Crash landing misreported. Closing transmission.
 	[end_timeline]
