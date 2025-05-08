@@ -41,7 +41,7 @@ func _process(delta):
 # --- Handle Weapon Pick-up and Drop ---
 func handle_weapon_interaction():
 	if reach.is_colliding():
-		if reach.get_collider().get_name() == "weapon":
+		#if reach.get_collider().get_name() == "weapon":
 			weapon_to_spawn = weapon_hr.instantiate()
 	else:
 		weapon_to_spawn = null

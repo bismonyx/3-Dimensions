@@ -449,6 +449,6 @@ transform = Transform3D(0.0441827, 0, 0, 0, 0.0441827, 0, 0, 0, 0.0441827, -5.55
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 5.1468, 2.92993, 6.53604)
 
 [node name="Tigerr" parent="." instance=ExtResource("8_cuo0o")]
-transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -3.3801, 2.58444, -26.4696)
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -2.15933, 2.58444, -26.4696)
 
 [connection signal="body_entered" from="CharacterBody3D/hand/weapon HR/Area3D" to="CharacterBody3D/hand/weapon HR" method="_on_area_3d_body_entered"]
