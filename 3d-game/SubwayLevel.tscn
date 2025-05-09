@@ -1,9 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://col6f8vjuob3y"]
+[gd_scene load_steps=7 format=3 uid="uid://col6f8vjuob3y"]
 
 [ext_resource type="PackedScene" uid="uid://du7mhrji7is50" path="res://3D models/level2/Subway2.gltf" id="1_rs0fu"]
 [ext_resource type="PackedScene" uid="uid://l8kfccrtdny3" path="res://3D models/level2/Subway3.gltf" id="2_o1btl"]
 [ext_resource type="PackedScene" uid="uid://dkxcgxddodv57" path="res://3D models/level2/Subway.gltf" id="3_xelkt"]
 [ext_resource type="PackedScene" uid="uid://coehieki287wl" path="res://animal_1.tscn" id="4_p3iu1"]
+[ext_resource type="PackedScene" uid="uid://iekrkyjf4j7r" path="res://tigerr.tscn" id="5_6pm47"]
+[ext_resource type="PackedScene" uid="uid://ccyuul06ecoe" path="res://buffaloo.tscn" id="6_7d5gs"]
 
 [node name="Node3D" type="Node3D"]
 
@@ -17,10 +19,19 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.30856, -1.19209e-07, 3.249
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.30856, -1.19209e-07, 3.2497)
 
 [node name="Animal 1" parent="." instance=ExtResource("4_p3iu1")]
-transform = Transform3D(0.0140577, 0, -0.0142261, 0, 0.02, 0, 0.0142261, 0, 0.0140577, -153.608, 0.109705, -41.8042)
+transform = Transform3D(0.0281154, 0, -0.0284521, 0, 0.04, 0, 0.0284521, 0, 0.0281154, -153.608, 0.109705, -41.8042)
 
 [node name="Animal 2" parent="." instance=ExtResource("4_p3iu1")]
 transform = Transform3D(-0.0283076, -0.000365986, -0.00992705, -0.000345366, 0.0299978, -0.000121115, 0.00992779, 0, -0.0283097, -4.45392, 0, -1.14727)
 
 [node name="Animal 3" parent="." instance=ExtResource("4_p3iu1")]
 transform = Transform3D(-0.0386531, 0, -0.0102927, 0, 0.04, 0, 0.0102927, 0, -0.0386531, -10.9482, 0, -32.7641)
+
+[node name="Animal 4" parent="." instance=ExtResource("4_p3iu1")]
+transform = Transform3D(0.06, 0, 0, 0, 0.06, 0, 0, 0, 0.06, -95.2679, 0, -40.947)
+
+[node name="Tigerr" parent="." instance=ExtResource("5_6pm47")]
+transform = Transform3D(0.0117557, 0, -0.0161803, 0, 0.02, 0, 0.0161803, 0, 0.0117557, -44.2219, 0.0896593, -42.4525)
+
+[node name="buffaloo" parent="." instance=ExtResource("6_7d5gs")]
+transform = Transform3D(-0.790151, 0, -0.125148, 0, 0.8, 0, 0.125148, 0, -0.790151, -184.197, 0.153873, -57.9226)

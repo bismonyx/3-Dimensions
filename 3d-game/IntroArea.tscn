@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://dkhv62ty5fesc"]
+[gd_scene load_steps=19 format=3 uid="uid://dkhv62ty5fesc"]
 
 [ext_resource type="Script" uid="uid://c40twqfdaato6" path="res://intro_area.gd" id="1_q2vtk"]
 [ext_resource type="Script" uid="uid://16w385wcqwlm" path="res://stand-in-character.gd" id="1_rbmbq"]
@@ -87,6 +87,8 @@ _data = {
 &"attack": SubResource("Animation_y3byi")
 }
 
+[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_ch8it"]
+
 [node name="Intro Area" type="Node3D"]
 script = ExtResource("1_q2vtk")
 
@@ -160,7 +162,7 @@ transform = Transform3D(0.100442, 0, 0, 0, 0.100442, 0, 0, 0, 0.100442, 107.76, 
 visible = false
 
 [node name="Scanner" parent="." instance=ExtResource("9_uac7w")]
-transform = Transform3D(0.0441827, 0, 0, 0, 0.0441827, 0, 0, 0, 0.0441827, -5.55379, 17.1676, -5.35503)
+transform = Transform3D(0.0441827, 0, 0, 0, 0.0441827, 0, 0, 0, 0.0441827, -5.55379, 9.82241, -2.85727)
 
 [node name="buffaloo" parent="." instance=ExtResource("9_ch8it")]
 transform = Transform3D(0.358661, 0, -0.933468, 0, 1, 0, 0.933468, 0, 0.358661, 5.1468, 9.07825, 16.7546)
@@ -170,5 +172,15 @@ transform = Transform3D(0.04, 0, 0, 0, 0.04, 0, 0, 0, 0.04, 29.1729, 8.8096, -22
 
 [node name="NewMap" parent="." instance=ExtResource("9_hqpmw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -140.531, 5.61758, -123.06)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NewMap"]
+transform = Transform3D(4.5, 0, 0, 0, 4.5, 0, 0, 0, 4.5, 155.168, 3.37675, 117.004)
+shape = SubResource("WorldBoundaryShape3D_ch8it")
+debug_color = Color(0.379707, 0.501028, 0.924393, 0.42)
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="NewMap"]
+transform = Transform3D(2500, 0, 0, 0, 2500, 0, 0, 0, 2500, 7167.08, 0.111, 3360.37)
+shape = SubResource("WorldBoundaryShape3D_ch8it")
+debug_color = Color(0.379707, 0.501028, 0.924393, 0.42)
 
 [connection signal="body_entered" from="CharacterBody3D/hand/weapon HR/Area3D" to="CharacterBody3D/hand/weapon HR" method="_on_area_3d_body_entered"]
