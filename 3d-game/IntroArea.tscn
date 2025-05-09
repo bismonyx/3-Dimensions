@@ -113,6 +113,7 @@ transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -0.104
 mesh = SubResource("CapsuleMesh_cbnxv")
 
 [node name="Head" type="Node3D" parent="CharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.481997, 0)
 
 [node name="Camera3D" type="Camera3D" parent="CharacterBody3D/Head"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.252934, 0.685438, -0.557917)
@@ -152,6 +153,7 @@ shadow_enabled = true
 
 [node name="Animal 2" parent="." instance=ExtResource("4_dlwjt")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.315, 14.0543, -6.82815)
+visible = false
 
 [node name="Spaceship" parent="." instance=ExtResource("5_e7i3o")]
 transform = Transform3D(0.100442, 0, 0, 0, 0.100442, 0, 0, 0, 0.100442, 107.76, 20.6824, -9.72166)
@@ -162,9 +164,11 @@ transform = Transform3D(0.0441827, 0, 0, 0, 0.0441827, 0, 0, 0, 0.0441827, -5.55
 
 [node name="buffaloo" parent="." instance=ExtResource("9_ch8it")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 5.1468, 14.6592, 6.53604)
+visible = false
 
 [node name="Tigerr" parent="." instance=ExtResource("8_cuo0o")]
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -2.15933, 14.3137, -26.4696)
+visible = false
 
 [node name="NewMap" parent="." instance=ExtResource("9_hqpmw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -140.531, 5.61758, -123.06)

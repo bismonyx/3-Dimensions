@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://col6f8vjuob3y"]
+[gd_scene load_steps=5 format=3 uid="uid://col6f8vjuob3y"]
 
 [ext_resource type="PackedScene" uid="uid://du7mhrji7is50" path="res://3D models/level2/Subway2.gltf" id="1_rs0fu"]
 [ext_resource type="PackedScene" uid="uid://l8kfccrtdny3" path="res://3D models/level2/Subway3.gltf" id="2_o1btl"]
 [ext_resource type="PackedScene" uid="uid://dkxcgxddodv57" path="res://3D models/level2/Subway.gltf" id="3_xelkt"]
+[ext_resource type="PackedScene" uid="uid://coehieki287wl" path="res://animal_1.tscn" id="4_p3iu1"]
 
 [node name="Node3D" type="Node3D"]
 
@@ -14,3 +15,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.30856, -1.19209e-07, 3.249
 
 [node name="Subway3" parent="." instance=ExtResource("3_xelkt")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.30856, -1.19209e-07, 3.2497)
+
+[node name="Animal 1" parent="." instance=ExtResource("4_p3iu1")]
+transform = Transform3D(0.0140577, 0, -0.0142261, 0, 0.02, 0, 0.0142261, 0, 0.0140577, -153.608, 0.109705, -41.8042)
