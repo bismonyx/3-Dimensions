@@ -163,12 +163,10 @@ visible = false
 transform = Transform3D(0.0441827, 0, 0, 0, 0.0441827, 0, 0, 0, 0.0441827, -5.55379, 17.1676, -5.35503)
 
 [node name="buffaloo" parent="." instance=ExtResource("9_ch8it")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 5.1468, 14.6592, 6.53604)
-visible = false
+transform = Transform3D(0.358661, 0, -0.933468, 0, 1, 0, 0.933468, 0, 0.358661, 5.1468, 9.07825, 16.7546)
 
 [node name="Tigerr" parent="." instance=ExtResource("8_cuo0o")]
-transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -2.15933, 14.3137, -26.4696)
-visible = false
+transform = Transform3D(0.04, 0, 0, 0, 0.04, 0, 0, 0, 0.04, 29.1729, 8.8096, -22.3094)
 
 [node name="NewMap" parent="." instance=ExtResource("9_hqpmw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -140.531, 5.61758, -123.06)
